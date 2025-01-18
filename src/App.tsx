@@ -234,8 +234,29 @@ function App() {
         </motion.header>
 
         {/* Features Section */}
-        <section className="min-h-screen bg-[#2C3D4F] flex items-center">
-          <div className="container mx-auto px-6">
+        <section className="min-h-screen bg-black/50 backdrop-blur-sm flex items-center">
+          <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 bg-black/50"></div>
+          </div>
+          <div className="container mx-auto px-6 relative z-10">
+            <motion.h2 
+              className="text-4xl font-light text-center mb-8 text-white"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              Our Expertise
+            </motion.h2>
+            <motion.p
+              className="text-xl text-white/90 text-center mb-16 max-w-3xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              Delivering exceptional cleaning services with meticulous attention to detail
+            </motion.p>
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-3 gap-16 max-w-7xl mx-auto"
               variants={containerVariants}
